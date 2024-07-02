@@ -16,7 +16,7 @@ public class BrowserSetUp {
     @Before
     public void setUpDriver() {
         String driverType = System.getenv("WEB_DRIVER");
-        driver = getDriver(driverType == null ? "сhrome" : driverType);
+        driver = getDriver(driverType == null ? "chrome" : driverType);
         driver.get("https://qa-scooter.praktikum-services.ru/");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
