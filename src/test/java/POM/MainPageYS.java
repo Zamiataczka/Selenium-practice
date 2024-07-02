@@ -116,7 +116,6 @@ public class MainPageYS {
     private By headerOrderStatus = By.className("Header_Link__1TAG7");
     private By headerOrderStatusField = By.xpath(".//input[@placeholder = 'Введите номер заказа']");
     private By headerOrderApproveButton = By.xpath(".//button[@class = 'Button_Button__ra12g Header_Button__28dPO']");
-    private By dzenPageNewsButton = By.className("floor-title__title-2v");
 
 
     public void headerScooterCheckUrl() {

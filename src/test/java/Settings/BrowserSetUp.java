@@ -7,10 +7,8 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.util.concurrent.TimeUnit;
 
-import static Sourses.ConstatnsText.mainPageYsURL;
 
 public class BrowserSetUp {
     protected WebDriver driver;
@@ -18,7 +16,7 @@ public class BrowserSetUp {
     @Before
     public void setUpDriver() {
         String driverType = System.getenv("WEB_DRIVER");
-        driver = getDriver(driverType == null ? "Chrome" : driverType);
+        driver = getDriver(driverType == null ? "сhrome" : driverType);
         driver.get("https://qa-scooter.praktikum-services.ru/");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
