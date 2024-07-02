@@ -1,7 +1,7 @@
-package Tests.FireFox;
+package Tests;
 
-import BrowserSetUp.FireFox.BrowserSetUpFireFox;
 import POM.*;
+import Settings.BrowserSetUp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class getOrderTest extends BrowserSetUpFireFox {
+public class GetOrderTest extends BrowserSetUp {
     private final String typeOrderButton;
     private final String firstName;
     private final String secondName;
@@ -20,7 +20,7 @@ public class getOrderTest extends BrowserSetUpFireFox {
     private final String colourButton;
     private final String userComment;
 
-    public getOrderTest(String typeOrderButton, String firstName, String secondName, String address, String phoneNumber, String userDataDeliver, String typeButton, String colourButton, String userComment) {
+    public GetOrderTest (String typeOrderButton, String firstName, String secondName, String address, String phoneNumber, String userDataDeliver, String typeButton, String colourButton, String userComment) {
         this.typeOrderButton = typeOrderButton;
         this.firstName = firstName;
         this.secondName = secondName;

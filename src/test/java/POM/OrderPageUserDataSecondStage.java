@@ -44,7 +44,7 @@ public class OrderPageUserDataSecondStage {
     private By commentField = By.xpath(".//input[@placeholder ='Комментарий для курьера']");
 
     //Кнопка "Заказать"
-    private By orderButton = By.xpath(".//button[text()='Заказать']");
+    private By orderButton = By.xpath(".//div[@class='Order_Buttons__1xGrp']/button[text()='Заказать']");
 
     //Метод с вводом даты и нажанием ввода для фиксации даты доставки
     public void SendWhenDeliver(String userDataDeliver) {

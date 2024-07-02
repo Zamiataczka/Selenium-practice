@@ -10,7 +10,8 @@ public class ConstatnsText {
     public static final String expectedAnswer6 = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.";
     public static final String expectedAnswer7 = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
 
-    public static final String getExpectedURLScooterComeBack = "https://qa-scooter.praktikum-services.ru/";
+
+    public static final String mainPageYsURL = "https://qa-scooter.praktikum-services.ru/";
     public static final String getExpectedURLYandexComeBack = "https://dzen.ru/?yredirect=true";
 
     public static final String expectedError1 = "Введите корректное имя";

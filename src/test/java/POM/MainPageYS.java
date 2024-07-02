@@ -8,8 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import static Sourses.ConstatnsText.getExpectedURLYandexComeBack;
+import static Sourses.ConstatnsText.mainPageYsURL;
 import static org.junit.Assert.assertEquals;
 
 public class MainPageYS {
@@ -30,7 +32,7 @@ public class MainPageYS {
     }
 
     //Кнопка "Заказать" в центральной части страницы
-    private By OrderButtonMiddle = By.xpath(".//button[contains(@class,'Button_UltraBig__UU3Lp')]");
+    private By OrderButtonMiddle = By.className("Button_Middle__1CSJM");
 
     //Скролл до кнопки "Заказать" и клик по ней
     public MainPageYS orderButtonMiddleClick() {
@@ -109,23 +111,29 @@ public class MainPageYS {
             return driver.findElement(indexChosen).getText();
         }
 
-    private By headerScooterLink = By.xpath(".//img[@alt = 'Scooter']");
-    private By headerYandexLink = By.xpath(".//img[@alt = 'Yandex']");
+    private By headerScooterLink = By.className("Header_LogoScooter__3lsAR");
+    private By headerYandexLink = By.className("Header_LogoYandex__3TSOI");
     private By headerOrderStatus = By.className("Header_Link__1TAG7");
     private By headerOrderStatusField = By.xpath(".//input[@placeholder = 'Введите номер заказа']");
     private By headerOrderApproveButton = By.xpath(".//button[@class = 'Button_Button__ra12g Header_Button__28dPO']");
+    private By dzenPageNewsButton = By.className("floor-title__title-2v");
+
 
     public void headerScooterCheckUrl() {
-        String currentPage=driver.getCurrentUrl();
         driver.findElement(headerScooterLink).click();
-        String newPage = driver.getCurrentUrl();
-        assertEquals(currentPage, newPage);
+        String currentPage=driver.getCurrentUrl();
+        assertEquals(currentPage, mainPageYsURL);
     }
 
     public void headerYandexCheckUrl() {
+        String mainTab = driver.getWindowHandle();
         driver.findElement(headerYandexLink).click();
+        for (String tab: driver.getWindowHandles()) {
+            driver.switchTo().window(tab);
+        }
         String newPage = driver.getCurrentUrl();
-        assertEquals(getExpectedURLYandexComeBack, newPage);
+        driver.switchTo().window(mainTab);
+        assertEquals(newPage, getExpectedURLYandexComeBack);
     }
 
     public MainPageYS headerStatusOrderFinder(String numberOrder) {

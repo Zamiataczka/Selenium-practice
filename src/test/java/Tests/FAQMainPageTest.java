@@ -1,6 +1,6 @@
-package Tests.Chrome;
-import BrowserSetUp.Chrome.BrowserSetUpChrome;
+package Tests;
 import POM.MainPageYS;
+import Settings.BrowserSetUp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -9,7 +9,7 @@ import static Sourses.ConstatnsText.*;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class FAQMainPageTest extends BrowserSetUpChrome {
+public class FAQMainPageTest extends BrowserSetUp {
 
         private final int Index;
         private final String expected;
