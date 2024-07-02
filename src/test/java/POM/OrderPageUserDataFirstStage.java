@@ -1,13 +1,7 @@
 package POM;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-import static Sourses.ConstatnsText.*;
-import static org.junit.Assert.assertEquals;
 
 //Первый стейдж формы заказа
 public class OrderPageUserDataFirstStage {
